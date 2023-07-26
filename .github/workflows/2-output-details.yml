@@ -1,0 +1,9 @@
+name: Output details
+on: [push, workflow_dispatch]
+jobs:
+  output-details:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Output metadata
+        run: echo "${{ github }}"
